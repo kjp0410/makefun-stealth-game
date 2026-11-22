@@ -1,0 +1,136 @@
+/* Shadow Shift — dark-room styling. The game is the canvas; the chrome
+ * around it stays quiet so the cones and the exit do the talking. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #0b0e16;
+  color: #c8d2ea;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topbar {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #232a3d;
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffd94d;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.level-name { font-weight: 600; color: #e8edf8; white-space: nowrap; }
+.stat { color: #9aa7c4; font-size: 14px; white-space: nowrap; }
+#eyeCv { margin-left: auto; background: #10141f; border: 1px solid #232a3d; border-radius: 6px; }
+
+#stage {
+  position: relative;
+  margin: 14px 0 10px;
+  line-height: 0;
+}
+#cv {
+  background: #181d29;
+  border: 1px solid #2b3247;
+  border-radius: 6px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 190px);
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 12, 0.72);
+  border-radius: 6px;
+  line-height: 1.45;
+  cursor: pointer;
+  z-index: 5;
+}
+#overlay.show { display: flex; }
+.card {
+  background: #141927;
+  border: 1px solid #39415a;
+  border-radius: 10px;
+  padding: 26px 34px;
+  max-width: 560px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+.card h1 {
+  margin: 4px 0 8px;
+  font-size: 34px;
+  letter-spacing: 4px;
+  color: #f2f5fc;
+}
+.card .kicker {
+  color: #ffd94d;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+.card .tag { color: #b9c3da; margin: 6px 0 12px; font-size: 15px; }
+.card .keys { color: #9aa7c4; font-size: 14px; margin: 6px 0; }
+.card .keys b { color: #e8edf8; }
+.card .keys.dim { color: #77819c; font-size: 13px; }
+.card .stars { color: #ffd94d; font-size: 16px; margin: 10px 0; line-height: 1.7; }
+.card.spotted h1 { color: #ff5040; }
+.lvl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 14px 0;
+  text-align: left;
+}
+.lvl-btn {
+  background: #1c2334;
+  border: 1px solid #39415a;
+  color: #e8edf8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.lvl-btn:hover { border-color: #ffd94d; background: #232c44; }
+.lvl-btn b { font-size: 14px; }
+.lvl-btn span { color: #9aa7c4; font-size: 12px; }
+
+.toolbar {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 16px 16px;
+  color: #77819c;
+  font-size: 13px;
+}
+#toast { color: #b9c3da; }
+.keys-hint { flex: 1; text-align: center; }
+.buttons { display: flex; gap: 8px; }
+.buttons button {
+  background: #1c2334;
+  border: 1px solid #39415a;
+  color: #c8d2ea;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+.buttons button:hover { border-color: #ffd94d; color: #fff; }

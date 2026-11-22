@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Shift — a top-down stealth game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">SHADOW&nbsp;SHIFT</div>
+  <div class="level-name" id="hudLevel">Level 1 / 6 — First Steps</div>
+  <div class="stat" id="hudTime">0:00</div>
+  <div class="stat" id="hudCoins">Coins 3</div>
+  <div class="stat" id="hudIntel">Intel ☆</div>
+  <div class="stat" id="hudSpotted">Spotted 0</div>
+  <canvas id="eyeCv" width="140" height="56" title="Detection eye"></canvas>
+</header>
+
+<main id="stage">
+  <canvas id="cv" width="640" height="440"></canvas>
+  <div id="overlay"></div>
+</main>
+
+<footer class="toolbar">
+  <span id="toast">Stay out of the cones. Reach the green exit.</span>
+  <span class="keys-hint">WASD / arrows move · Shift sneak · Space / click throws a coin · P pause · R restart · M mute</span>
+  <span class="buttons">
+    <button id="btnPause" type="button">Pause</button>
+    <button id="btnRestart" type="button">Restart</button>
+    <button id="btnMute" type="button">Mute</button>
+  </span>
+</footer>
+
+<script src="js/levels.js"></script>
+<script src="js/vision.js"></script>
+<script src="js/guards.js"></script>
+<script src="js/player.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
